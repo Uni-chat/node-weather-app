@@ -16,9 +16,13 @@ const forecast = (latitude, longitude, callback) => {
 
         } else {
 
-            callback(undefined, 'It is currently: '+ body.current.temp+
-            ' degrees out.\nThere is: '+ body.current.clouds +'% chance of rain.\n' 
-            +'Sky View: '+ body.current.weather[0].description +'.')
+            //const txt = body.current.temp
+
+            callback(undefined, 'It is currently: '+ body.current.temp 
+            +' degrees out.\nThere is: '+ body.current.clouds +'% chance of rain.\n' 
+            +'Humidity: '+ body.current.humidity +'. Wind Speed is: '
+            + body.current.wind_speed+'. Sky View: '
+            + body.current.weather[0].description +'.')
         }
     })
 
